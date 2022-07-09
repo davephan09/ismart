@@ -1,0 +1,43 @@
+.error {
+    font-size: 14px;
+    color: #f00;
+    margin-top: 0px;
+}
+
+#list-paging .active a{
+    color: #f00 !important;
+}
+
+.radio-check {
+    margin-bottom: 18px;
+    margin-top: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+.add-file {
+    border: solid 1px #000;
+    width: 90px;
+    padding: 0px 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: #a4949445;
+    cursor: pointer;
+    text-align: center;
+}
+
+.add-file:hover {
+    background-color: #a49494b3;
+}
+
+.sum-price {
+    margin-right: 109px;
+    margin-top: 20px;
+}
+
+#infor-customer {
+    margin-bottom: 20px;
+}
