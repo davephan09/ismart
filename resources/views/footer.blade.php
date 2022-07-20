@@ -14,13 +14,13 @@
                 <h3 class="title">Thông tin cửa hàng</h3>
                 <ul class="list-item">
                     <li>
-                        <p>106 - Trần Bình - Cầu Giấy - Hà Nội</p>
+                        <p>Cầu Giấy - Hà Nội</p>
                     </li>
                     <li>
                         <p>0987.654.321 - 0989.989.989</p>
                     </li>
                     <li>
-                        <p>vshop@gmail.com</p>
+                        <p>quanggdat1906@gmail.com</p>
                     </li>
                 </ul>
             </div>
@@ -34,10 +34,10 @@
                         <a href="/1-chinh-sach-bao-hanh.html" title="">Chính sách bảo hành - đổi trả</a>
                     </li>
                     <li>
-                        <a href="" title="">Chính sách hội viên</a>
+                        <a href="/4-chinh-sach-hoi-vien.html" title="">Chính sách hội viên</a>
                     </li>
                     <li>
-                        <a href="" title="">Giao hàng - lắp đặt</a>
+                        <a href="/4-chinh-sach-giao-hang-lap-dat.html" title="">Giao hàng - lắp đặt</a>
                     </li>
                 </ul>
             </div>
