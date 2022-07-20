@@ -19,7 +19,7 @@
                     <h3 class="section-title">{{ $page->name }}</h3>
                 </div>
                 <div class="section-detail">
-                    <span class="create-date">{{ $page->updated_at }}</span>
+                    <span class="create-date">{{ date('d-m-Y', strtotime($page->updated_at)) }}</span>
                     <div class="detail">
                         {!! $page->content !!}
                     </div>

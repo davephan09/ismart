@@ -28,13 +28,13 @@
                 <h3 class="title">Chính sách mua hàng</h3>
                 <ul class="list-item">
                     <li>
-                        <a href="" title="">Quy định - chính sách</a>
+                        <a href="/2-quy-trinh-giao-dich.html" title="">Quy định - chính sách</a>
                     </li>
                     <li>
                         <a href="/1-chinh-sach-bao-hanh.html" title="">Chính sách bảo hành - đổi trả</a>
                     </li>
                     <li>
-                        <a href="" title="">Chính sách hội viện</a>
+                        <a href="" title="">Chính sách hội viên</a>
                     </li>
                     <li>
                         <a href="" title="">Giao hàng - lắp đặt</a>

@@ -43,7 +43,7 @@
                                     <a href="?page=detail_blog" title="">Giới thiệu</a>
                                 </li>
                                 <li>
-                                    <a href="?page=detail_blog" title="">Liên hệ</a>
+                                    <a href="/3-lien-he.html" title="">Liên hệ</a>
                                 </li>
                             </ul>
                         </div>
