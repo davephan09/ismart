@@ -27,15 +27,22 @@
                         <textarea name="content" id="desc" class="ckeditor">{{ $product->content }}</textarea>
                         <label>Hình ảnh</label>
                         <div id="uploadFile">
+                            <!-- <div id="add-file" class="add-file">Thêm File</div> -->
+                            <div id="files">
+                                
+                                <input type='file' id="multiFiles" name='files[]' multiple>
+                                
+                            </div>
+                        </div>
+                        <!-- <div id="uploadFile">
                             <input type="file" name="file" id="upload-thumb">
-                            <!-- <input type="submit" name="btn-upload-thumb" value="Upload" id="btn-upload-thumb"> -->
                             <div id="image-show">
                                 <a href="{{ $product->thumb }}" target="_blank">
                                     <img src="{{ $product->thumb }}" width="100px">
                                 </a>
                             </div>
                             <input type="hidden" name="thumb" value="{{ $product->thumb }}" id="thumb">
-                        </div>
+                        </div> -->
                         <label>Danh mục cha</label>
                         <select name="cat_id">
                             <option value="">-- Chọn danh mục --</option>

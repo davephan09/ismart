@@ -87,15 +87,13 @@ class ProductCatService
     public function getProduct($productCat)     //Query list products theo category    
     {
         if ($productCat->parent_id == 0) {
-            $cats = ProductCat::where('parent_id', $productCat->id)->where('active', 1);
-            $products = new Product;
+            $cats = $productCat->childrens;
+            $catId = array();
             foreach ($cats as $cat) {
-                $products = Product::where('cat_id', $cat->id)->with('image')->where('active', 1);
+                $catId[] = $cat->id;
             }
-            // $products = Product::joinSub($cats, 'cats', function ($join) {
-            //     $join->on('products.cat_id', '=', 'cats.id');
-            // })->with('image')->where('active', 1);
-            
+            $products = Product::whereIn('cat_id', $catId)->with('image')->where('active', 1);
+
             return $products;
         } else {
             $products = $productCat->products()->with('image')->where('active', 1);

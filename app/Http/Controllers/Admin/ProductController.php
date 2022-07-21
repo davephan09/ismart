@@ -65,7 +65,7 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         return view('admin.products.edit', [
-            'title' => 'Chỉnh sửa sản phẩm' . $product->name,
+            'title' => 'Chỉnh sửa sản phẩm ' . $product->name,
             'product' => $product,
             'productCat' => $this->ProductService->getCat(),
         ]);

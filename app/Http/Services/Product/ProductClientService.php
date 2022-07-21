@@ -12,7 +12,6 @@ class ProductClientService
     public function get()               //Show list sản phẩm trên home
     {
         return Product::where('active', 1)
-            ->limit(self::LIMIT)
             ->orderByDesc('id')
             ->with('image')
             ->get();

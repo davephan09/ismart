@@ -113,6 +113,7 @@
     font-family: 'Roboto Medium';
     margin: 15px 0px 5px 0px;
     line-height: normal;
+    min-height: 36px;
 }
 #feature-product-wp .list-item li .price, #list-product-wp .list-item li .price, #same-category-wp .list-item li .price{ text-align: center; margin-bottom: 15px;}
 #feature-product-wp .list-item li .price .new, #list-product-wp .list-item li .price .new, #same-category-wp .list-item li .price .new{

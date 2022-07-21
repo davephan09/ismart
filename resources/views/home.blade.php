@@ -154,8 +154,15 @@
                 </div>
                 <div class="section-detail">
                     <ul class="list-item clearfix">
+                        @php
+                        $t = 0;
+                        @endphp
                         @foreach ($products as $product)
+                        @if ($t < 8)
                         @if (in_array($product->cat_id, \App\Helpers\Helper::getArrayCatId($allProductCats, $productCat->id)))
+                        @php
+                        $t++;
+                        @endphp
                         <li>
                             <a href="/san-pham/{{ $product->id }}-{{ \Str::slug($product->name) }}.html" title="" class="thumb">
                                 <img src="{{ optional($product->image)->thumb }}">
@@ -170,6 +177,7 @@
                                 <a href="/checkout/{{$product->id}}" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
                             </div>
                         </li>
+                        @endif
                         @endif
                         @endforeach
                     </ul>

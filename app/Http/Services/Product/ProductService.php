@@ -79,6 +79,26 @@ class ProductService
         try {
             $product->fill($request->input());
             $product->save();
+            $newMedia = array();
+
+            //Update new images
+            foreach ($request->input('thumb') as $thumb) {
+                Media::create([
+                    'product_id' => $product->id,
+                    'thumb' => $thumb,
+                    'name' => basename($thumb),
+                ]);
+                $newMedia[] = $thumb;
+            }
+
+            //Delete old images 
+            $images = Media::whereNotIn('thumb', $newMedia)->where('product_id', $product->id)->get();
+            foreach ($images as $image) {
+                $path = str_replace('storage', 'public', $image->thumb);
+                Storage::delete($path);
+            }
+            Media::whereNotIn('thumb', $newMedia)->where('product_id', $product->id)->delete();
+
             Session::flash('success', 'Cập nhật thành công');
         } catch (\Exception $err) {
             Session::flash('error', 'Cập nhật thất bại');
@@ -88,20 +108,20 @@ class ProductService
         return true;
     }
 
-    public function destroy($request) {
+    public function destroy($request)
+    {
         $id = (int)$request->input('id');
         $product = Product::where('id', $id)->first();
         $images = Media::where('product_id', $id)->get();
         if ($product) {
             foreach ($images as $image) {
-            $path = str_replace('storage', 'public', $image->thumb);
-            Storage::delete($path);
+                $path = str_replace('storage', 'public', $image->thumb);
+                Storage::delete($path);
             }
             $product->delete();
             Media::where('product_id', $id)->delete();
             return true;
-        } 
+        }
         return false;
     }
-    
 }

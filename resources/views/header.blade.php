@@ -27,20 +27,26 @@
             <div id="header-wp">
                 <div id="head-top" class="clearfix">
                     <div class="wp-inner">
-                        <a href="" title="" id="payment-link" class="fl-left">Hình thức thanh toán</a>
+                        <a href="/6-chinh-sach-thanh-toan.html" title="" id="payment-link" class="fl-left">Hình thức thanh toán</a>
                         <div id="main-menu-wp" class="fl-right">
                             <ul id="main-menu" class="clearfix">
                                 <li>
-                                    <a href="?page=home" title="">Trang chủ</a>
+                                    <a href="/" title="">Trang chủ</a>
                                 </li>
                                 <li>
-                                    <a href="?page=category_product" title="">Sản phẩm</a>
+                                    <a href="/danh-muc/1-smartphone.html" title="">Smartphone</a>
+                                </li>
+                                <li>
+                                    <a href="/danh-muc/2-laptop.html" title="">Laptop</a>
+                                </li>
+                                <li>
+                                    <a href="/danh-muc/3-tablet.html" title="">Tablet</a>
                                 </li>
                                 <li>
                                     <a href="/blog/" title="">Blog</a>
                                 </li>
                                 <li>
-                                    <a href="?page=detail_blog" title="">Giới thiệu</a>
+                                    <a href="/5-gioi-thieu-chung.html" title="">Giới thiệu</a>
                                 </li>
                                 <li>
                                     <a href="/3-lien-he.html" title="">Liên hệ</a>
