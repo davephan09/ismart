@@ -124,4 +124,15 @@ class ProductService
         }
         return false;
     }
+
+    public function search($request)
+    {
+        if ($request->s) {
+        $key = $request->s;
+        return Product::where('name', 'like', '%'.$key.'%')
+            ->with('product_cat')
+            ->orderByDesc('id')
+            ->paginate(10);
+        }
+    }
 }

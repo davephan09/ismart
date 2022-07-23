@@ -114,4 +114,13 @@ class ProductController extends Controller
             'error' => true,
         ]);
     }
+
+    public function search(Request $request)
+    {
+        $products = $this->ProductService->search($request);
+        return view ('admin.products.list', [
+            'title' => 'Danh sách sản phẩm',
+            'products' => $products,
+        ]);
+    }
 }

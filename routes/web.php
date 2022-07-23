@@ -54,6 +54,7 @@ Route::middleware(['auth'])->group(function () {
             Route::get('edit/{post}', [PostController::class, 'show']);
             Route::post('edit/{post}', [PostController::class, 'update']);
             Route::delete('destroy', [PostController::class, 'destroy']);
+            Route::get('search', [PostController::class, 'search']);
         });
 
         #Product Category
@@ -74,6 +75,7 @@ Route::middleware(['auth'])->group(function () {
             Route::get('edit/{product}', [ProductController::class, 'show']);
             Route::post('edit/{product}', [ProductController::class, 'update']);
             Route::delete('destroy', [ProductController::class, 'destroy']);
+            Route::get('search', [ProductController::class, 'search']);
         });
 
         #Upload
@@ -94,6 +96,7 @@ Route::middleware(['auth'])->group(function () {
         Route::prefix('carts')->group(function () {
             Route::get('list', [CartController::class, 'index']);
             Route::get('show/{customer}', [CartController::class, 'show']);
+            Route::get('search', [CartController::class, 'search']);
         });
     });
 });

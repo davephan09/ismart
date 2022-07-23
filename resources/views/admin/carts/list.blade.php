@@ -12,11 +12,11 @@
                 <div class="section-detail">
                     <div class="filter-wp clearfix">
                         <ul class="post-status fl-left">
-                            <li class="all"><a href="">Tất cả <span class="count">(69)</span></a></li>
+                            <li class="all"><a href="">Tất cả <span class="count">({{count($customers)}})</span></a></li>
                         </ul>
-                        <form method="GET" class="form-s fl-right">
+                        <form method="GET" action="search" class="form-s fl-right">
                             <input type="text" name="s" id="s">
-                            <input type="submit" name="sm_s" value="Tìm kiếm">
+                            <button>Tìm kiếm</button>
                         </form>
                     </div>
                     <div class="actions">

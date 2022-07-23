@@ -17,9 +17,9 @@
                             <li class="publish"><a href="">Đã đăng <span class="count">({{ count($products->where('active', 1)) }})</span></a> |</li>
                             <li class="pending"><a href="">Chờ xét duyệt<span class="count">({{ count($products->where('active', 0)) }})</span> |</a></li>
                         </ul>
-                        <form method="GET" class="form-s fl-right">
+                        <form method="GET" class="form-s fl-right" action="search">
                             <input type="text" name="s" id="s">
-                            <input type="submit" name="sm_s" value="Tìm kiếm">
+                            <button>Tìm kiếm</button>
                         </form>
                     </div>
                     <div class="actions">

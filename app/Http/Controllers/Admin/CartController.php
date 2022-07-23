@@ -36,4 +36,16 @@ class CartController extends Controller
         ]);
 
     }
+
+    public function search(Request $request)
+    {
+        $customers = $this->cartService->search($request);
+
+        if ($customers) {
+            return view('admin.carts.list', [
+                'title' => 'Danh sách đơn hàng',
+                'customers' => $customers,
+            ]);
+        }
+    }
 }

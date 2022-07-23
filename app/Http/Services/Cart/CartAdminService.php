@@ -19,4 +19,14 @@ class CartAdminService
         }])->get();
     }
 
+    public function search($request)
+    {
+        if ($request->s) {
+        $key = $request->s;
+        return Customer::where('name', 'like', '%'.$key.'%')
+            ->orderByDesc('id')
+            ->paginate(10);
+        }
+    }
+
 }

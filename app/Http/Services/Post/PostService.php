@@ -62,4 +62,15 @@ class PostService
         }
         return false;
     }
+
+    public function search($request)
+    {
+        if ($request->s) {
+        $key = $request->s;
+        return Post::where('name', 'like', '%'.$key.'%')
+            ->with('post_cat')
+            ->orderByDesc('id')
+            ->paginate(10);
+        }
+    }
 }

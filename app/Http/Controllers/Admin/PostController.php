@@ -71,4 +71,15 @@ class PostController extends Controller
         }
         return response()->json(['error' => true]);
     }
+
+    public function search(Request $request)
+    {
+        $posts = $this->PostService->search($request);
+        if ($posts) {
+        return view('admin.posts.list', [
+            'title' => 'Danh sách bài viết',
+            'posts' => $posts,
+        ]);
+        }
+    }
 }
