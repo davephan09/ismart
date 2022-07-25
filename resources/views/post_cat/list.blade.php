@@ -32,7 +32,7 @@
                                 <a href="/blog/{{ \Str::slug($post->post_cat->name) }}/{{ $post->post_cat->id }}">{{ $post->post_cat->name }}</a>
                                 <a href="/blog/{{$post->id}}-{{ \Str::slug($post->name)}}.html" title="" class="title">{{ $post->name }}</a>
                                 <span class="create-date">{{ date('d-m-Y', strtotime($post->updated_at)) }}</span>
-                                <p class="desc">{{ $post->summary }}</p>
+                                <!-- <p class="desc">{{ $post->summary }}</p> -->
                             </div>
                         </li>
                     </ul>
