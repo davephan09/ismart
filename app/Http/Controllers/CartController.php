@@ -23,7 +23,6 @@ class CartController extends Controller
             return redirect()->back();
         }
         return redirect('carts');
-
     }
 
     public function show()
@@ -49,6 +48,12 @@ class CartController extends Controller
         return redirect('carts');
     }
 
+    public function removeAll()
+    {
+        $this->cartService->removeAll();
+        return redirect('carts');
+    }
+
     public function checkout()
     {
         $products = $this->cartService->getProduct();
@@ -68,12 +73,8 @@ class CartController extends Controller
 
     public function addToCart($id)
     {
-        $result = $this->cartService->addToCart($id);
-
-        if ($result == false) {
-            return redirect()->back();
-        }
-        return redirect('carts');
+        $this->cartService->addToCart($id);
+        return redirect()->back();
     }
 
     public function addToCheckout($id)
@@ -85,5 +86,4 @@ class CartController extends Controller
         }
         return redirect('checkout');
     }
-
 }

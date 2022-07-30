@@ -113,6 +113,7 @@ Route::post('add-cart', [App\Http\Controllers\CartController::class, 'index']);
 Route::get('carts', [App\Http\Controllers\CartController::class, 'show']);
 Route::post('update-cart', [App\Http\Controllers\CartController::class, 'update']);
 Route::get('carts/delete/{id}', [App\Http\Controllers\CartController::class, 'remove']);
+Route::get('carts/delete-all', [App\Http\Controllers\CartController::class, 'removeAll']);
 Route::get('checkout', [App\Http\Controllers\CartController::class, 'checkout']);
 Route::post('checkout', [App\Http\Controllers\CartController::class, 'addCart']);
 

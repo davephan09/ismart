@@ -81,6 +81,16 @@ class CartService
         return true;
     }
 
+    public function removeAll()
+    {
+        $carts = Session::get('carts');
+        foreach ($carts as $key => $cart) {
+        unset($carts[$key]);
+        Session::put('carts', $carts);
+        }
+        return true;
+    }
+
     public function addCart($request)
     {
         try {
