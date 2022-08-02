@@ -118,7 +118,7 @@ class Helper
         return false;
     }
 
-    public function getArrayCatId($productCat, $id)                //Lấy ra mảng cat_id con   
+    public static function getArrayCatId($productCat, $id)                //Lấy ra mảng cat_id con   
     {
         $array_id = array();
         foreach ($productCat as $cat) {
