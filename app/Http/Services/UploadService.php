@@ -3,8 +3,11 @@
 namespace App\Http\Services;
 
 use App\Models\Media;
+use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
 
 class UploadService
 
@@ -13,14 +16,21 @@ class UploadService
     {
         if ($request->hasFile('file')) {
             try {
-                $pathFull = 'uploads/' . date("Y/m/d");
-                $name = $request->file('file')->getClientOriginalName();
-                $request->file('file')->storeAs(
-                    'public/' . $pathFull,
-                    $name
-                );
+                // $pathFull = 'uploads/' . date("Y/m/d");
+                // $name = $request->file('file')->getClientOriginalName();
+                // $request->file('file')->storeAs(
+                //     'public/' . $pathFull,
+                //     $name
+                // );
 
-                return '/storage/' . $pathFull . '/' . $name;
+                // return '/storage/' . $pathFull . '/' . $name;
+
+                $image_name = $request->file('file');
+
+                $uploadFileUrl = Cloudinary::upload($image_name->getRealPath())->getSecurePath();
+
+                return $uploadFileUrl;
+
             } catch (\Exception $err) {
                 return false;
             }
@@ -35,14 +45,15 @@ class UploadService
 
                 if ($request->hasFile('files' . $i)) {
                     $file = $request->file('files' . $i);
-                    $pathFull = 'uploads/product/' . date("Y/m/d");
-                    $name = $file->getClientOriginalName();
-                    $file->storeAs(
-                        'public/' . $pathFull,
-                        $name
-                    );
+                    // $pathFull = 'uploads/product/' . date("Y/m/d");
+                    // $name = $file->getClientOriginalName();
+                    // $file->storeAs(
+                    //     'public/' . $pathFull,
+                    //     $name
+                    // );
 
-                    $thumbs[] = '/storage/' . $pathFull . '/' . $name;
+                    // $thumbs[] = '/storage/' . $pathFull . '/' . $name;
+                    $thumbs[] = Cloudinary::upload($file->getRealPath())->getSecurePath();
                 }
             }
 
