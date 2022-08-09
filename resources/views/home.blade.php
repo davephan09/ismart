@@ -190,8 +190,8 @@
             @include('product_hot')
             <div class="section" id="banner-wp">
                 <div class="section-detail">
-                    <a href="" title="" class="thumb">
-                        <img src="public/images/banner.png" alt="">
+                    <a href="https://github.com/davephan09" title="" class="thumb">
+                        <img src="public/images/david_github.png" alt="">
                     </a>
                 </div>
             </div>

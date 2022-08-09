@@ -58,7 +58,7 @@
                                     
                                     <td class="clearfix">
                                         <div class="tb-title fl-left">
-                                            <a href="" title="">{{ $page->name }}</a>
+                                            <a href="/{{$page->id}}-{{\Str::slug($page->name)}}.html" title="">{{ $page->name }}</a>
                                         </div>
                                         <ul class="list-operation fl-right">
                                             <li><a href="/admin/pages/edit/{{$page->id}}" title="Sửa" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></a></li>

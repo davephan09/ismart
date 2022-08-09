@@ -72,7 +72,7 @@
                                     </td>
                                     <td class="clearfix">
                                         <div class="tb-title fl-left">
-                                            <a href="" title="">{{ $product->name }}</a>
+                                            <a href="/san-pham/{{ $product->id }}-{{ \Str::slug($product->name) }}.html" title="">{{ $product->name }}</a>
                                         </div>
                                         <ul class="list-operation fl-right">
                                             <li><a href="/admin/products/edit/{{$product->id}}" title="" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></a></li>

@@ -64,7 +64,7 @@
                                     </td>
                                     <td class="clearfix">
                                         <div class="tb-title fl-left">
-                                            <a href="" title="">{{ $post->name }}</a>
+                                            <a href="/blog/{{ $post->id }}-{{ \Str::slug($post->name)}}.html" title="">{{ $post->name }}</a>
                                         </div>
                                         <ul class="list-operation fl-right">
                                             <li><a href="/admin/posts/edit/{{$post->id}}" title="Sửa" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></a></li>

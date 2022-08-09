@@ -37,10 +37,10 @@
                                     <a href="/danh-muc/1-smartphone.html" title="">Smartphone</a>
                                 </li>
                                 <li>
-                                    <a href="/danh-muc/2-laptop.html" title="">Laptop</a>
+                                    <a href="/danh-muc/5-laptop.html" title="">Laptop</a>
                                 </li>
                                 <li>
-                                    <a href="/danh-muc/3-tablet.html" title="">Tablet</a>
+                                    <a href="/danh-muc/8-tablet.html" title="">Tablet</a>
                                 </li>
                                 <li>
                                     <a href="/blog/" title="">Blog</a>
