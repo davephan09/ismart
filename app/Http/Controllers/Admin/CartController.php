@@ -48,4 +48,12 @@ class CartController extends Controller
             ]);
         }
     }
+
+    public function listCustomer()
+    {
+        return view('admin.carts.list_customer', [
+            'title' => 'Danh sách khách hàng',
+            'customers' => $this->cartService->getCustomer(),
+        ]);
+    }
 }

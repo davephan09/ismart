@@ -46,7 +46,8 @@
                 <p class="desc">Đăng ký với chung tôi để nhận được thông tin ưu đãi sớm nhất</p>
                 <div id="form-reg">
                     <form method="POST" action="">
-                        <input type="email" name="email" id="email" placeholder="Nhập email tại đây">
+                        @csrf
+                        <input type="email" name="email" id="email" class="email-reg" placeholder="Nhập email tại đây">
                         <button type="submit" id="sm-reg">Đăng ký</button>
                     </form>
                 </div>

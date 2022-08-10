@@ -73,9 +73,9 @@
                                 <li>
                                     <a href="/admin/carts/list" title="">Danh sách đơn hàng</a>
                                 </li>
-                                <!-- <li>
-                                        <a href="?page=list_order" title="">Danh sách khách hàng</a> 
-                                    </li> -->
+                                <li>
+                                    <a href="/admin/carts/customers" title="">Danh sách khách hàng</a> 
+                                </li>
                             </ul>
                         </li>
                         <li>

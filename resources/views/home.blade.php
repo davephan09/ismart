@@ -191,7 +191,7 @@
             <div class="section" id="banner-wp">
                 <div class="section-detail">
                     <a href="https://github.com/davephan09" title="" class="thumb">
-                        <img src="public/images/david_github.png" alt="">
+                        <img src="template/images/david_github.png" alt="">
                     </a>
                 </div>
             </div>

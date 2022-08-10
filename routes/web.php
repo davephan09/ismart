@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\ProductCatController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\UploadController;
+use App\Http\Controllers\CustomerController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('admin/users/login', [LoginController::class, 'index'])->name('admin/login');
@@ -97,6 +98,7 @@ Route::middleware(['auth'])->group(function () {
             Route::get('list', [CartController::class, 'index']);
             Route::get('show/{customer}', [CartController::class, 'show']);
             Route::get('search', [CartController::class, 'search']);
+            Route::get('customers', [CartController::class, 'listCustomer']);
         });
     });
 });
@@ -133,3 +135,6 @@ Route::prefix('blog')->group(function () {
 #Search
 Route::get('search', [App\Http\Controllers\SearchController::class, 'search']);
 Route::get('ajax-search-product', [App\Http\Controllers\SearchController::class, 'ajaxSearch']);
+
+#Reg Customer
+Route::post('/', [CustomerController::class, 'store']);
