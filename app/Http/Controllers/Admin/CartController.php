@@ -53,7 +53,7 @@ class CartController extends Controller
     {
         return view('admin.carts.list_customer', [
             'title' => 'Danh sách khách hàng',
-            'customers' => $this->cartService->getCustomer(),
+            'customers' => $this->cartService->getAllCustomer(),
         ]);
     }
 }

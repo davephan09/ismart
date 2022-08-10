@@ -9,6 +9,11 @@ class CartAdminService
 
     public function getCustomer()
     {
+        return Customer::where('name', '!=', '')->orderByDesc('id')->paginate(10);
+    }
+
+    public function getAllCustomer()
+    {
         return Customer::orderByDesc('id')->paginate(10);
     }
 
