@@ -1,6 +1,6 @@
 <div class="section" id="selling-wp">
     <div class="section-head">
-        <h3 class="section-title">Sản phẩm bán chạy</h3>
+        <h3 class="section-title">Sản phẩm mới</h3>
     </div>
     <div class="section-detail">
         <ul class="list-item">

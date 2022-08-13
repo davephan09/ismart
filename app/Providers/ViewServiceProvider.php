@@ -5,6 +5,7 @@ namespace App\Providers;
 
 use App\Http\View\Composers\CartComposer;
 use App\Http\View\Composers\ProductCatComposer;
+use App\Http\View\Composers\ProductHitComposer;
 use App\Http\View\Composers\ProductHotComposer;
 use App\View\Composers\ProfileComposer;
 use Illuminate\Support\Facades\View;
@@ -32,5 +33,6 @@ class ViewServiceProvider extends ServiceProvider
         View::composer('product_cat', ProductCatComposer::class);
         View::composer('cart', CartComposer::class);
         View::composer('product_hot', ProductHotComposer::class);
+        View::composer('product_hit', ProductHitComposer::class);
     }
 }
