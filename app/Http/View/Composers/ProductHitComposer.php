@@ -13,7 +13,7 @@ class ProductHitComposer
         $products = Product::where('active', 1)
             ->select('id', 'name', 'price', 'price_sale')
             ->with('image')
-            ->whereBetween('price_sale', [1000000, 30000000])
+            ->whereBetween('price_sale', [10000000, 30000000])
             ->limit(6)
             ->orderByDesc('id')
             ->get();
