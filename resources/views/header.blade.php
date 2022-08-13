@@ -14,6 +14,7 @@
     <link href="/template/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="/template/style.css" rel="stylesheet" type="text/css" />
     <link href="/template/responsive.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/png" href="/template/images/favicon.png"/>
 
     <script src="/template/js/jquery-2.2.4.min.js" type="text/javascript"></script>
     <script src="/template/js/elevatezoom-master/jquery.elevatezoom.js" type="text/javascript"></script>

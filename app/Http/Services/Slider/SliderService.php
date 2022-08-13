@@ -13,7 +13,7 @@ class SliderService
 {
     public function getAll()
     {
-        return Slider::orderByDesc('sort_by')->paginate(20);
+        return Slider::orderBy('sort_by', 'ASC')->paginate(20);
     }
 
     public function insert($request)
@@ -59,6 +59,6 @@ class SliderService
 
     public function show() 
     {
-        return Slider::where('active', 1)->orderByDesc('sort_by')->get();
+        return Slider::where('active', 1)->orderBy('sort_by','ASC')->get();
     }
 }

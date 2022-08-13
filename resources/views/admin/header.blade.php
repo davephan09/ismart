@@ -13,6 +13,7 @@
     <link href="/template/admin/style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="/template/admin/css/main.css" type="text/css" />
     <link href="/template/admin/responsive.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/png" href="/template/admin/images/admin.png"/>
 
     <script src="/template/admin/js/jquery-2.2.4.min.js" type="text/javascript"></script>
     <script src="/template/admin/js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
@@ -79,7 +80,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="" title="">Slider</a>
+                            <a href="/admin/sliders/list" title="">Slider</a>
                             <ul class="sub-menu">
                                 <li>
                                     <a href="/admin/sliders/add" title="">Thêm mới</a>
