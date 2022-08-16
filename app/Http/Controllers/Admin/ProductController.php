@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Product\ProductRequest;
 use Illuminate\Http\Request;
 use App\Http\Services\Product\ProductService;
+use App\Http\Services\ProductCat\ProductCatService;
 use App\Models\Product;
 use Illuminate\Http\JsonResponse;
 
@@ -13,9 +14,12 @@ class ProductController extends Controller
 {
 
     protected $productService;
-    public function __construct(ProductService $productService)
+    protected $productCatService;
+
+    public function __construct(ProductService $productService, ProductCatService $productCatService)
     {
-        return $this->ProductService = $productService;
+        $this->ProductService = $productService;
+        $this->productCatService = $productCatService;
     }
 
     /**
@@ -40,7 +44,7 @@ class ProductController extends Controller
     {
         return view('admin.products.add', [
             'title' => 'Thêm sản phẩm',
-            'productCat' => $this->ProductService->getCat(),
+            'productCat' => $this->productCatService->getAllCat(),
         ]);
     }
 

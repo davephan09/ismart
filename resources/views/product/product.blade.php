@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div class="thumb-respon-wp fl-left">
-                        <img src="/template/images/img-pro-01.png" alt="">
+                        <img src="{{ $mainImage->thumb }}" alt="">
                     </div>
                     <div class="info fl-right">
                         <h3 class="product-name">{{ $product->name }}</h3>

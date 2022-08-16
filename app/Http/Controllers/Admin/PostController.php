@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Post\PostRequest;
 use App\Http\Services\Post\PostService;
+use App\Http\Services\PostCat\PostCatService;
 use App\Models\Post;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -13,9 +14,12 @@ class PostController extends Controller
 {
 
     protected $post;
-    public function __construct(PostService $post)
+    protected $postCat;
+
+    public function __construct(PostService $post, PostCatService $postCat)
     {
-        return $this->PostService = $post;
+        $this->PostService = $post;
+        $this->postCatService = $postCat;
     }
 
     public function index()
@@ -30,7 +34,7 @@ class PostController extends Controller
     {
         return view('admin.posts.add', [
             'title' => 'Thêm bài viết',
-            'postCat' => $this->PostService->getCat(),
+            'postCat' => $this->postCatService->getAll(),
         ]);
     }
 
