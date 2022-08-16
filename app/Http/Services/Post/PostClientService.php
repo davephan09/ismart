@@ -11,6 +11,7 @@ class PostClientService
     {
         return Post::where('active', 1)
             ->with('post_cat')
+            ->orderByDesc('id')
             ->paginate(20);
     }
 
